@@ -18,7 +18,7 @@ module RailsAdmin
               %(<span class='label label-danger'>&#x2718;</span>)
             when true
               %(<span class='label label-success'>&#x2713;</span>)
-            end.html_safe
+            end
           end
 
           register_instance_option :export_value do
