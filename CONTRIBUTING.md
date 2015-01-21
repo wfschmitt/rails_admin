@@ -20,7 +20,7 @@ Here are some ways *you* can contribute:
 * [financially][gittip]
 
 [issues]: https://github.com/sferik/rails_admin/issues
-[gittip]: https://www.gittip.com/sferik/
+[gittip]: https://www.gittip.com/sferik/ZZ
 
 ## Getting Help
 
