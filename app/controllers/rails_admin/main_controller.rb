@@ -86,7 +86,11 @@ module RailsAdmin
         redirect_to back_or_index, flash: {success: notice}
       end
     end
-
+    def satisfy_strong_params!
+      if @abstract_model.model.ancestors.map(&:to_s).include?('ActiveModel::ForbiddenAttributesProtection')
+        params[@abstract_model.param_key].try :permit!
+      end
+    end
     def sanitize_params_for!(action, model_config = @model_config, target_params = params[@abstract_model.param_key])
       return unless target_params.present?
       fields = model_config.send(action).with(controller: self, view: view_context, object: @object).visible_fields
